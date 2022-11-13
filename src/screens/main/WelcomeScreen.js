@@ -1,5 +1,5 @@
 // src/screens/SplashScreen.js
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 
 const WelcomeScreen = props => {
@@ -8,7 +8,7 @@ const WelcomeScreen = props => {
   useEffect(() => {
     setTimeout(() => {
       setAuthLoaded(true);
-    }, 5000);
+    }, 3000);
   }, []);
 
   useEffect(() => {

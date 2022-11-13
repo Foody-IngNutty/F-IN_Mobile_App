@@ -3,10 +3,10 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const HomeScreen = () => {
+const NameScreen = () => {
   return (
     <View style={styles.root}>
-      <Text>Home Screen</Text>
+      <Text>Name Screen</Text>
     </View>
   );
 };
@@ -17,6 +17,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  button: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10
+  },
 });
 
-export default HomeScreen;
+export default NameScreen;
