@@ -1,22 +1,28 @@
-// App.js
-import React from 'react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
-import MainNavigator from './src/navigation/MainNavigator';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import React, { useState, useEffect } from "react";
+import { View, Text } from "react-native";
+import AnimatedSplash from "./lib/AnimatedSplash";
+import MainNavigator from "./src/navigation/MainNavigator";
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    flex: 1,
-  };
-
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
+  }, []);
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <MainNavigator />
-    </SafeAreaView>
+    <>
+      <AnimatedSplash
+        logoWidht={150}
+        logoHeight={150}
+        isLoaded={isLoaded}
+        backgroundColor={"#262626"}
+        logoImage={require("./assets/logo.png")}
+      >
+        <MainNavigator />
+      </AnimatedSplash>
+    </>
   );
 };
 

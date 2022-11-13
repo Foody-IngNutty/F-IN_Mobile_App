@@ -4,18 +4,18 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import HomeScreen from '../screens/HomeScreen';
-import SplashScreen from '../screens/SplashScreen';
+import WelcomeScreen from '../screens/WelcomeScreen';
 
 const Stack = createStackNavigator();
 
 const MainNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Splash">
+      <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen
-          name="Splash"
+          name="Welcome"
           options={{animationEnabled: false, header: () => null}}
-          component={SplashScreen}
+          component={WelcomeScreen}
         />
         <Stack.Screen
           name="Home"
