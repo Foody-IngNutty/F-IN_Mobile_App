@@ -2,7 +2,7 @@
 import React, {useRef, useState, useEffect} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 
-const SplashScreen = props => {
+const WelcomeScreen = props => {
   const [authLoaded, setAuthLoaded] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const SplashScreen = props => {
 
   return (
     <View style={styles.root}>
-      <Text>Splash Screen</Text>
+      <Text>Welcome to Foody IngNutty</Text>
     </View>
   );
 };
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SplashScreen;
+export default WelcomeScreen;
