@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text } from "react-native";
+
 import AnimatedSplash from "./lib/AnimatedSplash";
 import MainNavigator from "./src/navigation/MainNavigator";
 
