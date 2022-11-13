@@ -19,7 +19,7 @@ const WelcomeScreen = props => {
 
   return (
     <View style={styles.root}>
-      <Text>Welcome to Foody IngNutty</Text>
+      <Text style={{fontSize: 50}}>Welcome to Foody IngNutty</Text>
     </View>
   );
 };
