@@ -1,6 +1,6 @@
 // src/screens/SplashScreen.js
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
 
 const WelcomeScreen = props => {
   const [authLoaded, setAuthLoaded] = useState(false);
@@ -18,9 +18,10 @@ const WelcomeScreen = props => {
   }, [authLoaded, props.navigation]);
 
   return (
-    <View style={styles.root}>
+    <SafeAreaView style={styles.root}>
+      <StatusBar barStyle="dark-content" />
       <Text style={{fontSize: 50}}>Welcome to Foody IngNutty</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

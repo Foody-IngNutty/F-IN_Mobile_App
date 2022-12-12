@@ -25,7 +25,7 @@ const MainNavigator = () => {
         />
         <Stack.Screen
           name="Home"
-          options={{animationEnabled: true, header: () => null}}
+          options={{animationEnabled: false}}
           component={HomeScreen}
         />
 

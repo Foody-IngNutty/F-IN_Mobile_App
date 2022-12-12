@@ -1,17 +1,17 @@
 // srс/screens/HomeScreen.js
 
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import { SafeAreaView, StatusBar, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   return (
-    <View style={styles.root}>
-      <Text style={{fontSize: 50}}>Home Screen</Text>
+    <SafeAreaView style={styles.root}>
+      <StatusBar barStyle="dark-content" />
 
-      <Text style={{fontSize: 25, alignSelf: 'flex-start', paddingTop: '75%'}}>Browse by:</Text>
+      <Text style={{fontSize: 25, alignSelf: 'flex-start'}}>Browse by:-</Text>
 
         <TouchableOpacity
           style={styles.button}
@@ -45,7 +45,7 @@ const HomeScreen = () => {
           <Text>Category</Text>
         </TouchableOpacity>
         
-    </View>
+    </SafeAreaView>
   );
 };
 
