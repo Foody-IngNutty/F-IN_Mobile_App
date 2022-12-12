@@ -11,7 +11,7 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.root}>
       <StatusBar barStyle="dark-content" />
 
-      <Text style={{fontSize: 25, alignSelf: 'flex-start'}}>Browse by:</Text>
+      <Text style={{fontSize: 25, alignSelf: 'flex-start'}}>Browse by:-</Text>
 
         <TouchableOpacity
           style={styles.button}
