@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from "react";
 
-export default function App() {
+import AnimatedSplash from "./lib/AnimatedSplash";
+import MainNavigator from "./src/navigation/MainNavigator";
+
+const App = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
+  }, []);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <AnimatedSplash
+        logoWidht={150}
+        logoHeight={150}
+        isLoaded={isLoaded}
+        backgroundColor={"#262626"}
+        logoImage={require("./assets/logo.png")}
+      >
+        <MainNavigator />
+      </AnimatedSplash>
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
